@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/providers/theme-provider";
-import { ThemeToggle } from "@/components/theme-toggle";
+import HydrationFix from "./hydration-fix";
 
 const inter = Inter({
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Authentication Demo",
-  description: "Authentication demo with Next.js and Go",
+  title: "Next.js App",
+  description: "Created with Next.js",
 };
 
 export default function RootLayout({
@@ -19,25 +18,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <div className="min-h-screen bg-background">
-            <header className="border-b bg-background">
-              <div className="container flex h-16 items-center justify-between">
-                <div className="font-semibold">Auth Demo</div>
-                <ThemeToggle />
-              </div>
-            </header>
-            <main className="container py-6">{children}</main>
-          </div>
-        </ThemeProvider>
-      </body>
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
+
+// <html lang="en" suppressHydrationWarning>
+//   <body className={inter.className} suppressHydrationWarning>
+//     <HydrationFix />
+//     {children}
+//   </body>
+// </html>;
