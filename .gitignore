@@ -1,0 +1,40 @@
+# Loại bỏ thư mục docs
+/docs/
+
+# Node dependencies
+node_modules/
+.next/
+.turbo/
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Go
+/vendor/
+*.exe
+*.test
+*.prof
+
+# Compiled Go binaries
+bin/
