@@ -1,34 +1,85 @@
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+/**
+ * Design System
+ * -------------
+ * Hệ thống biến CSS cho dự án
+ */
 
 @layer base {
-  * {
-    border-color: hsl(var(--border));
+  /* ------- Design Tokens ------- */
+  :root {
+    /* primary colors */
+    --color-primary: #007aff;
+    --color-primary-foreground: #010202;
+
+    /* secondary colors */
+    --color-secondary: #6c757d;
+    --color-secondary-foreground: #f2f4f5;
+
+    /* tertiary colors */
+    --color-tertiary: #ffc107;
+    --color-tertiary-foreground: #fffde7;
   }
-  body {
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
-    font-feature-settings: "rlig" 1, "calt" 1;
+
+  .dark {
+    /* primary colors */
+    --color-primary: #007aff;
+    --color-primary-foreground: #e3f2fd;
+
+    /* secondary colors */
+    --color-secondary: #6c757d;
+    --color-secondary-foreground: #f2f4f5;
+
+    /* tertiary colors */
+    --color-tertiary: #ffc107;
+    --color-tertiary-foreground: #fffde7;
+  }
+
+  /* Biến dùng chung cho cả light và dark mode */
+  :root,
+  .dark {
+    /* spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+
+    /* padding */
+    --padding-xs: 0.25rem;
+    --padding-sm: 0.5rem;
+    --padding-md: 1rem;
+    --padding-lg: 1.5rem;
+    --padding-xl: 2rem;
+
+    /* font sizes */
+    --font-size-xs: 0.75rem; /* 12px in rem */
+    --font-size-sm: 0.875rem; /* 14px in rem */
+    --font-size-md: 1rem; /* 16px in rem */
+    --font-size-lg: 1.125rem; /* 18px in rem */
+    --font-size-xl: 1.5rem; /* 24px in rem */
+    --font-size-xl2: 1.875rem; /* 30px in rem */
+    --font-size-xl3: 2.25rem; /* 36px in rem */
+    --font-size-xl4: 3rem; /* 48px in rem */
+
+    /* line height */
+    --screen-sm-xs: 1; /* 16px in rem */
+    --line-height-sm: 1.25; /* 20px in rem */
+    --line-height-md: 1.5; /* 24px in rem */
+    --line-height-lg: 1.75; /* 28px in rem */
+    --line-height-xl: 2; /* 32px in rem */
+
+    /* border width */
+    --border-width-xs: 0.0625rem; /* 1px in rem */
+    --border-width-sm: 0.125rem; /* 2px in rem */
+    --border-width-md: 0.25rem; /* 4px in rem */
+    --border-width-lg: 0.5rem; /* 8px in rem */
+    --border-width-xl: 1rem; /* 16px in rem */
+
+    /* Screen BreakPoints */
+    --screen-sm: 640px; /* 20px in rem */
+    --screen-md: 768px; /* 24px in rem */
+    --screen-lg: 1024px; /* 28px in rem */
+    --screen-xl: 1280px; /* 32px in rem */
+    --screen-2xl: 1400px; /* 32px in rem */
   }
 }

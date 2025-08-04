@@ -1,8 +1,11 @@
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <h1 className="text-4xl font-bold">Welcome to Next.js</h1>
-      <p className="mt-4">Get started by editing app/page.tsx</p>
+    <main className="p-8 flex flex-col items-center justify-center min-h-screen">
+      <h1 className="text-tertiary font-bold text-3xl mb-4">Xin chào! 👋</h1>
+      <p>Trang sử dụng Tailwind CSS v4 với các biến design token</p>
+      <div className="bg-gradient mt-4 p-4 rounded-md text-white">
+        Gradient background mẫu
+      </div>
     </main>
   );
 }
