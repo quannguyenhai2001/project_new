@@ -77,6 +77,7 @@ export default function Home() {
         <Button onClick={onSubmit}>Submit</Button>
       </div>
       <div>
+        {" "}
         <Input
           placeholder="Email"
           value={email}
